@@ -1,0 +1,12 @@
+{% extends 'my_base.html' %}
+{% block title %}首页{% endblock %}
+
+{% block head_message %}欢迎来到人物管理系统{% endblock %}
+
+{% block page_content %}
+{% if name %}
+    <h2>欢迎回来{{ name }}</h2>
+{% else %}
+    <h2>你好像还没注册</h2>
+{% endif %}
+{% endblock %}

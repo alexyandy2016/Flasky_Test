@@ -1,0 +1,11 @@
+{% extends 'my_base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block page_content %}
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert">&times</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {{ wtf.quick_form(form,form_type='horizontal',horizontal_columns=('lg',3,6)) }}
+{% endblock %}
